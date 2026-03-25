@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  servico1:
+    build: ./servico1
+    ports:
+      - "8001:8000"
+
+  servico2:
+    build: ./servico2
+    ports:
+      - "8002:8000"
+    depends_on:
+      - servico1
